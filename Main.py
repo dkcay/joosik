@@ -8,6 +8,23 @@ import math
 st.set_page_config(page_title="매크로 종합 대시보드", layout="wide")
 # st_autorefresh(interval=60000, key="datarefresh")
 
+st.markdown(
+    """
+    <style>
+    @media (max-width: 768px) {
+        div[data-testid="stHorizontalBlock"] {
+            flex-direction: column !important;
+        }
+        div[data-testid="stHorizontalBlock"] > div[data-testid="stColumn"] {
+            width: 100% !important;
+            flex: 1 1 100% !important;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.write("주식 상황 종합 (1분 단위 업데이트)")
 st.markdown("---")
 
